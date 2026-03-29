@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageId>MaverickLogging</PackageId>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<Version></Version>
+	  <Authors>Dan Colgan</Authors>
+	  <Company>Maverick Software</Company>
+	  <Description>A simple logging library for .NET applications.  MIT</Description>
+	  <PackageOutputPath>..\..\z_LocalNuget\LocalNuget</PackageOutputPath>
+    <Nullable>enable</Nullable>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <Copyright>2026 Maverick Software</Copyright>
+  </PropertyGroup>
+
+
+	<PropertyGroup>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="LICENSE.txt" Pack="true" PackagePath=""/>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Serilog" Version="3.1.1" />
+		<PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.14" />		
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.14" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <None Update="readme.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+</Project>
